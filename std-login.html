@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="#">
+  <style>
+    body {
+      height: 100vh;
+      background: url('./img/background-img.jpg') no-repeat;
+      background-size: cover;
+      opacity: 0.8;
+      background-position: center;
+      font-family: Roboto, Arial;
+    }
+
+    .loginbox {
+      top: 50%;
+      left: 50%;
+      transform: translate(40%, -50%);
+      padding: 70px 30px;
+    }
+
+    .avatar {
+      transform: translate(80%, -125%);
+    }
+
+    .clr {
+      color: rgb(45, 162, 224);
+    }
+
+    .label {
+      transform: translate(-245px, -19px);
+      display: none;
+      font-size: 13px;
+    }
+
+    .textbox {
+      border-bottom: 1px solid rgb(45, 162, 224);
+      transition: outline 0.15s;
+    }
+
+
+    .textbox:focus-within {
+      display: block;
+      outline: 1px solid rgb(45, 162, 224);
+      border-radius: 2px;
+      padding: 10px 2px;
+    }
+
+    .textbox input {
+      outline: none;
+      float: left;
+    }
+
+    .log-btn {
+      border: 2px solid rgb(45, 162, 224);
+    }
+
+    .log-btn:hover {
+      opacity: 0.8;
+    }
+
+
+    @media (max-width:768px) {
+      .loginbox {
+        left: -80px;
+      }
+    }
+
+    .textbox:focus-within .label {
+      display: inline-block;
+    }
+
+    .login-btn:hover,
+    .login-btn:active {
+      color: rgb(45, 162, 224);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="position-absolute bg-dark rounded loginbox" style="width: 300px;
+  height: 420px;">
+    <img src="./img/avatar.png" alt="" class="position-absolute rounded-circle avatar"
+      style="height:100px ;width:100px;">
+    <h1 class="m-0 fs-3 clr pb-4 text-center ">Student Login</h1>
+    <form>
+      <div class="mb-3 textbox z-index-n1 me-5 ms-0 mt-3 mb-5" style="width: 100%;">
+        <i class="fas fa-user clr float-right text-center" style="  width: 26px;"></i>
+        <input type="text" class="bg-transparent border-0 text-white ms-1 me-3" placeholder="Enter Username"
+          data-toggle="tooltip" data-placement="top">
+        <label class="label clr ms-3 z-index-1 bg-dark position-absolute ps-1" style="width: 68px;"
+          for="username">Username</label>
+      </div>
+
+
+      <div class="mb-3 textbox z-index-n1 me-5 ms-0 mt-4" style="width: 100%;">
+        <i class="fas fa-eye clr float-right text-center" style="  width: 26px;"></i>
+        <input type="password" class="bg-transparent border-0 text-white ms-1 me-3" placeholder="Enter password"
+          data-toggle="tooltip" data-placement="top">
+        <label class="label clr ms-3 z-index-1 bg-dark position-absolute ps-1" for="password"
+          style="width: 68px;">Password</label>
+      </div>
+      <div>
+        <button class="log-btn d-inline-block rounded mt-5 mb-1 ms-4 me-4 fs-5 pe-auto clr bg-transparent"
+          style="width:180px ;"><a href="index.html" class="text-decoration-none clr login-btn">Login</a>
+          <i class="fa fa-sign-in ps-3"></i></button>
+      </div>
+      <!-- onhover color -->
+      <div class="text-center p-1"><a href="#" class="text-secondary text-decoration-none f-link">Forget
+          password?</a></div>
+    </form>
+  </div>
+</body>
+
+</html>
